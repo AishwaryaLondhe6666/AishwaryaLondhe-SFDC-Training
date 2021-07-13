@@ -1,0 +1,26 @@
+<apex:page standardController="JobOpportunities__c">
+       
+           <apex:form >
+               <apex:pageBlock title="jobs" mode="edit">
+                   
+                          <apex:pageblockButtons >
+                               <apex:commandButton value="save" action="{!save}" />
+                               <apex:commandButton value="Cancel" action="{!Cancel}"/>
+                          </apex:pageblockButtons>
+                   
+                          <apex:pageBlockSection title="jobContent">
+                               <apex:inputField value="{!JobOpportunities__c.Name__c}"/>
+                               <apex:inputField value="{!JobOpportunities__c.Description__c}"/>
+                               <apex:inputField value="{!JobOpportunities__c.Active__c}"/>
+                                <apex:inputField value="{!JobOpportunities__c.Expiry_Date__c}"/>
+                               <apex:inputField value="{!JobOpportunities__c.Job_Title__c}"/>
+                               <apex:inputField value="{!JobOpportunities__c.Manager__c}"/>
+                               <apex:inputField value="{!JobOpportunities__c.Number_of_Positions__c}"/>
+                               <apex:inputField value="{!JobOpportunities__c.Salary_Offered__c}"/>
+                                <apex:inputField value="{!JobOpportunities__c.Total__c}"/>
+                          </apex:pageBlockSection>
+               
+                </apex:pageBlock>
+           </apex:form>
+      
+</apex:page>

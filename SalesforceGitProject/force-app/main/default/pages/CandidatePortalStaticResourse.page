@@ -1,0 +1,107 @@
+<apex:page controller="CandidatePortalCustomControllers" id="pg" showHeader="false">
+     <apex:stylesheet value="{!URLFOR($Resource.App_css,'App_css/Style.css')}"/>
+    <style>
+        
+        
+    </style>
+    
+     <div class="column content-table" id="div">   
+        <apex:form id="form1">
+             <h1 style="text-align:center; font-size:30px;">
+            Candidate Portal
+        </h1>
+                    <apex:pageBlock id="thePageBlock">
+            <div class="header">
+                <apex:image url="{!URLFOR($Resource.App_Images,'App_Images/EnzigmaImage.jpg')}" styleclass="img"/>
+            </div>
+            <table id="table" width="50%" class="center table-bordered">
+               
+               
+                <tr>
+                    <td> <label> <span class="span">*</span>Salutation :</label> </td>
+                    <td> <apex:inputField id="sltn" value="{!candidate.Salutation__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>First Name :</label> </td>
+                    <td> <apex:inputField id="fn" value="{!candidate.FirstName__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Last Name:</label> </td>
+                    <td> <apex:inputField id="ln" value="{!candidate.LastName__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Country :</label> </td>
+                    <td> <apex:inputField id="cntr" value="{!candidate.Country__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>State :</label> </td>
+                    <td> <apex:inputField id="sts" value="{!candidate.States__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Email:</label> </td>
+                    <td> <apex:inputField id="email" value="{!candidate.Email__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Date of Birth:</label> </td>
+                    <td> <apex:inputField id="dob" value="{!candidate.DOB__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Application Date :</label> </td>
+                    <td> <apex:inputField id="apld" value="{!candidate.ApplicationDate__c}"/></td>
+                </tr>
+                <tr>
+                    <td> <label> <span class="span">*</span>Expected Salary :</label> </td>
+                    <td> <apex:inputField id="expdsal" value="{!candidate.ExpectedSalary__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Status :</label> </td>
+                    <td> <apex:inputField id="status" value="{!candidate.Status__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Job :</label> </td>
+                    <td> <apex:inputField id="jb" value="{!candidate.Job__c}"/></td>
+                </tr>
+              
+                
+                
+            </table>
+                        
+            
+            <apex:commandButton id="button" onclick="showErrors()" value="Save the filed" action="{!save}"/>
+            </apex:pageBlock>
+            
+        </apex:form>
+    </div>
+    
+      <script>
+    function showErrors() {
+        
+         var salutation = document.getElementById('pg:form1:sltn').value;
+          var fn = document.getElementById('pg:form1:fn').value;
+          var ln = document.getElementById('pg:form1:ln').value;
+          var email = document.getElementById('pg:form1:email').value;
+          var country = document.getElementById('pg:form1:cntr').value;
+          var states = document.getElementById('pg:form1:sts').value;
+        var dob = document.getElementById('pg:form1:dob').value;
+         var apldate = document.getElementById('pg:form1:apld').value;
+          var expeSalary = document.getElementById('pg:form1:expdsal').value;
+        var status = document.getElementById('pg:form1:status').value;
+         var job = document.getElementById('pg:form1:jb').value;
+       
+    
+          if((salutation=='')||(fn=='')||(ln=='')||(email=='')||(country=='')||(states=='')||(dob=='')||(apldate=='')||(expeSalary=='')||(status=='')||(job==''))
+            {
+               alert("Please Enter Name");
+           }
+        
+      
+       
+        
+            
+        
+        
+    }
+    </script>
+    
+    
+</apex:page>

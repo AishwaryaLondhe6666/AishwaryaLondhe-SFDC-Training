@@ -1,0 +1,20 @@
+<apex:page standardController="JobMPage__c">
+       
+           <apex:form >
+               <apex:pageBlock title="jobs" mode="edit">
+                   
+                          <apex:pageblockButtons >
+                               <apex:commandButton value="save" action="{!save}" />
+                               <apex:commandButton value="Cancel" action="{!Cancel}"/>
+                          </apex:pageblockButtons>
+                   
+                          <apex:pageBlockSection title="jobContent">
+                               <apex:inputField value="{!JobMPage__c.Description__c}"/>
+                               <apex:inputField value="{!JobMPage__c.JobTypes__c}"/>
+                               <apex:inputField value="{!JobMPage__c.TotalApplicants__c}"/>
+                          </apex:pageBlockSection>
+               
+                </apex:pageBlock>
+           </apex:form>
+      
+</apex:page>

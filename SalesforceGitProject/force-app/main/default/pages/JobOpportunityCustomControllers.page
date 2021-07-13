@@ -1,0 +1,51 @@
+<apex:page controller="JobOpportunitiesCustomController" showHeader="false">
+ 
+    
+
+    
+       <apex:form style="border-style:solid; border width:2px; border-color:black; background-color:#f8f8ff" id="form">
+             <apex:stylesheet value="{!URLFOR($Resource.App_css, 'App_css.css')}"/>
+           
+      
+ 
+           
+           
+           <h1 style="text-align:center; font-size:30px;">
+               Job Wizard
+           </h1>
+          <!-- <apex:stylesheet value="{!$Resource.App_css}"/>-->
+         
+    
+              
+            <apex:pageBlock id="pb">
+                
+                   
+           
+                 <!--  <apex:outputPanel  layout="block" style="border-style:solid; border-color:black">-->
+                              
+                                   <apex:image url="{!URLFOR($Resource.App_Images,'App_Images/EnzigmaImage.jpg')}" width="200" height="200"/>
+                                      
+                               
+                                  <apex:pageBlockSection id="pbs">  
+                                    <apex:inputField styleclass="Name" id="ip1" value="{!candidate.Name__c}"/>
+                                       <apex:inputField styleclass="Manager" id="ip2" value="{!candidate.Manager__c}"/>
+                                         <apex:inputField styleclass="NumberofPositions" id="ip3" value="{!candidate.Number_of_Positions__c}"/>
+                                          <tr><apex:inputField styleclass="SalaryOffered" id="ip4" value="{!candidate.Salary_Offered__c}"/></tr> 
+                                          <apex:inputField styleclass="Total" id="ip5" value="{!candidate.Total__c}"/>
+                                          <tr> <apex:inputField styleclass="JobTitle" id="ip6" value="{!candidate.Job_Title__c}"/></tr>
+                                          <tr><apex:inputField styleclass="ExpiryDate" id="ip7" value="{!candidate.Expiry_Date__c}"/></tr>
+                                          <tr> <apex:inputField styleclass="Description" id="ip8" value="{!candidate.Description__c}" style="width:50px;height:50px"/></tr>
+                                          <tr> <apex:inputField styleclass="Active" id="ip9" value="{!candidate.Active__c}"/></tr>
+                                  </apex:pageBlockSection>
+                           
+                            <apex:pageBlockButtons >
+                            <apex:commandButton value="save" action="{!Save}"/>
+                   </apex:pageBlockButtons>
+              
+                <!--  </apex:outputPanel>-->
+              
+    </apex:pageBlock>
+                 
+ </apex:form>
+ 
+</apex:page>

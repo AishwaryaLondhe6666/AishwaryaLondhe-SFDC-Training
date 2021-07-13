@@ -1,0 +1,90 @@
+<apex:page controller="pageHandler" id="pg" showHeader="false">
+     <apex:stylesheet value="{!URLFOR($Resource.App_css,'App_css/Style.css')}"/>
+    <style>
+        
+        
+    </style>
+    
+     <div class="column content-table" id="div">   
+        <apex:form id="form1">
+             <h1 style="text-align:center; font-size:30px;">
+            Job Wizard
+        </h1>
+                    <apex:pageBlock id="thePageBlock">
+            <div class="header">
+                <apex:image url="{!URLFOR($Resource.App_Images,'App_Images/EnzigmaImage.jpg')}" styleclass="img"/>
+            </div>
+            <table id="table" width="50%" class="center table-bordered">
+               
+               
+                <tr>
+                    <td> <label> <span class="span">*</span>Number of Positions :</label> </td>
+                    <td> <apex:inputField id="noofpos" value="{!candidate3.Number_of_Positions__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Manager :</label> </td>
+                    <td> <apex:inputField id="mgr" value="{!candidate3.Manager__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span> Job Title:</label> </td>
+                    <td> <apex:inputField id="jtl" value="{!candidate3.Job_Title__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Salary Offered :</label> </td>
+                    <td> <apex:inputField id="slo" value="{!candidate3.Salary_Offered__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Active :</label> </td>
+                    <td> <apex:inputField id="act" value="{!candidate3.Active__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Expiry Date:</label> </td>
+                    <td> <apex:inputField id="expD" value="{!candidate3.Expiry_Date__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Total :</label> </td>
+                    <td> <apex:inputField id="ttl" value="{!candidate3.Total__c}"/></td>
+                </tr>
+                 <tr>
+                    <td> <label> <span class="span">*</span>Description :</label> </td>
+                    <td> <apex:inputField id="descr" value="{!candidate3.Description__c}"/></td>
+                </tr>
+                
+                
+            </table>
+                        
+            
+            <apex:commandButton id="button" onclick="showErrors()" value="Save the filed" action="{!save}"/>
+            </apex:pageBlock>
+            
+        </apex:form>
+    </div>
+    
+      <script>
+    function showErrors() {
+        
+         var noofpos = document.getElementById('pg:form1:noofpos').value;
+          var manager = document.getElementById('pg:form1:mgr').value;
+          var jobtitle = document.getElementById('pg:form1:jtl').value;
+          var sloffer = document.getElementById('pg:form1:slo').value;
+          var active = document.getElementById('pg:form1:act').value;
+          var expdate = document.getElementById('pg:form1:expD').value;
+        var total = document.getElementById('pg:form1:ttl').value;
+       
+    
+          if((noofpos=='')||(manager=='')||(jobtitle=='')||(sloffer=='')||(active=='')||(expdate=='')||(total==''))
+            {
+               alert("Please Enter Name");
+           }
+        
+      
+       
+        
+            
+        
+        
+    }
+    </script>
+    
+    
+</apex:page>

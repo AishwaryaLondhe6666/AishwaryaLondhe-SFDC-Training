@@ -1,0 +1,4 @@
+<apex:page >
+<apex:image url="{!URLFOR($Resource.App_Images,
+                  'App_Images/EnzigmaImage.jpg')}" width="200" height="200"/>
+    </apex:page>

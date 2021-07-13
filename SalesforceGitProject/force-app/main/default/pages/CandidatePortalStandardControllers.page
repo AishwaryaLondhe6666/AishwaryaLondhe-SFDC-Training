@@ -1,0 +1,32 @@
+<apex:page standardController="CandidatePortal__c">
+       
+    <apex:form >
+        <apex:pageBlock title="Candidates" mode="edit">
+            
+               <apex:pageblockButtons >
+                   <apex:commandButton value="save" action="{!save}" />
+                   <apex:commandButton value="Cancel" action="{!Cancel}"/>
+               </apex:pageblockButtons>
+            
+               <apex:pageBlockSection title="CandidatesContent">
+                    <apex:inputField value="{!CandidatePortal__c.Name}"/>
+                    <apex:inputField value="{!CandidatePortal__c.Salutation__c}"/>
+                    <apex:inputField value="{!CandidatePortal__c.FirstName__c}"/>
+                    <apex:inputField value="{!CandidatePortal__c.LastName__c}"/>
+                    <apex:inputField value="{!CandidatePortal__c.FullName__c}"/>
+                    <apex:inputField value="{!CandidatePortal__c.Email__c}"/>
+                    <apex:inputField value="{!CandidatePortal__c.DOB__c}"/>
+                    <apex:inputField value="{!CandidatePortal__c.Country__c}"/>
+                    <apex:inputField value="{!CandidatePortal__c.Job__c}"/>
+                    <apex:inputField value="{!CandidatePortal__c.Age__c}"/>
+                    <apex:inputField value="{!CandidatePortal__c.ApplicationDate__c}"/>
+                    <apex:inputField value="{!CandidatePortal__c.ExpectedSalary__c}"/>
+                   
+                    <apex:inputField value="{!CandidatePortal__c.Status__c}"/>
+                    <apex:inputField value="{!CandidatePortal__c.States__c}"/>
+                </apex:pageBlockSection>
+               
+          </apex:pageBlock>
+    </apex:form>
+      
+</apex:page>

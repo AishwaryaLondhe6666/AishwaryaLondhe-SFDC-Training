@@ -1,0 +1,66 @@
+<apex:page controller="pageHandler" showHeader="false">
+    <apex:stylesheet value="{!URLFOR($Resource.App_css,'App_css/Style.css')}"/>
+    
+  <script type="text/javascript">
+    function confirmation()
+    {
+        var x = document.getElementById('theForm:thePageBlock:thePageBlockSection:theFieldInput3').value;
+        var y = document.getElementById('theForm:thePageBlock:thePageBlockSection:theFieldInput4').value; 
+        var z = document.getElementById('theForm:thePageBlock:thePageBlockSection:theFieldInput5').value;
+        //  var q = document.getElementById('theForm:thePageBlock:thePageBlockSection:theFieldInput7').value;
+
+      
+        
+       alert("Value of x :"+ x);
+       alert("Value of y :"+ y);
+       alert("Value of z :"+ z);
+           if(x=="" || y=="" || z=="")
+           {
+                alert("Please enter the values for all fields.");
+                return false;
+           }
+           else {
+           alert("Save and close.");
+           return true;
+           }
+ 
+      }
+            
+           
+</script>
+    
+    <apex:form id="theForm">
+        
+        <h1 style="text-align:center; font-size:30px;">
+            Job Wizard
+        </h1>
+        <!-- <apex:actionFunction action="{!submt}" name="callsubmt" rerender="pb"/>-->
+        <apex:pageBlock id="thePageBlock">
+            <div class="header">
+                <apex:image url="{!URLFOR($Resource.App_Images,'App_Images/EnzigmaImage.jpg')}" styleclass="img"/>
+            </div>
+            <div class="container">
+                <apex:pageBlockSection id="thePageBlockSection">
+                    <apex:inputField styleclass="Name" id="theFieldInput1" value="{!candidate3.Name__c}"/>
+                    <apex:inputField styleclass="Manager" id="theFieldInput3" value="{!candidate3.Manager__c}"/>
+                    <apex:inputField styleclass="theFieldInput3" id="nop" value="{!candidate3.Number_of_Positions__c}"/>
+                    <apex:inputField styleclass="JobTitle" id="theFieldInput4" value="{!candidate3.Job_Title__c}"/>       
+                    <apex:inputField styleclass="SalaryOffered" id="theFieldInput5" value="{!candidate3.Salary_Offered__c}"/> 
+                    <apex:inputField styleclass="Active" id="theFieldInput6" value="{!candidate3.Active__c}"/>
+                    <apex:inputField styleclass="ExpiryDate" id="theFieldInput7" value="{!candidate3.Expiry_Date__c}"/>
+                    <apex:inputField styleclass="Total" id="theFieldInput8" value="{!candidate3.Total__c}"/>
+                    <apex:inputField styleclass="Description" id="theFieldInput9" value="{!candidate3.Description__c}"/>
+                      <apex:commandButton styleclass="button" value="save" action="{!save}" onclick="return confirmation();"/>                    
+                </apex:pageBlockSection>
+             </div>
+          
+            
+           
+            
+            
+            
+            
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

@@ -1,0 +1,10 @@
+<apex:page standardController="Account" sidebar="false">
+
+<apex:form >
+   <apex:PageBlock >
+<apex:pageBlockSection >
+ <apex:outputField value="{!account.name}"/>
+  </apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

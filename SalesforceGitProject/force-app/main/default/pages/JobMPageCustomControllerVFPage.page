@@ -1,0 +1,23 @@
+<apex:page Controller="JobMPageCustomController">
+       
+           <apex:form >
+               <apex:pageBlock title="jobs" mode="edit">
+                   
+                          <apex:pageblockButtons >
+                               <apex:commandButton value="save" action="{!save}" />
+                            
+                          </apex:pageblockButtons>
+                   
+                          <apex:pageBlockSection title="jobContent">
+                               <apex:inputField value="{!jobj.Description__c}"/>
+                               <apex:inputField value="{!jobj.JobTypes__c}"/>
+                               <apex:inputField value="{!jobj.TotalApplicants__c}"/>
+                                 <apex:inputField value="{!jobj.Name}"/>
+                              
+                              
+                          </apex:pageBlockSection>
+               
+                </apex:pageBlock>
+           </apex:form>
+      
+</apex:page>

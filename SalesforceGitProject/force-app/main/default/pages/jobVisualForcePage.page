@@ -1,0 +1,40 @@
+<apex:page controller="jobVisualForcePages" showHeader="false">
+    <apex:stylesheet value="{!URLFOR($Resource.App_css,'App_css/Style.css')}"/>
+    
+
+    
+    <apex:form id="theForm">
+        
+        <h1 style="text-align:center; font-size:30px;">
+            Job Wizard
+        </h1>
+        
+        <apex:pageBlock id="thePageBlock">
+            <div class="header">
+                <apex:image url="{!URLFOR($Resource.App_Images,'App_Images/EnzigmaImage.jpg')}" styleclass="img"/>
+            </div>
+            <div class="container">
+                <apex:pageBlockSection id="thePageBlockSection">
+                    <apex:inputField styleclass="Name" id="theFieldInput1" value="{!candidate2.Name__c}"/>
+                    <apex:inputField styleclass="Manager" id="theFieldInput3" value="{!candidate2.Manager__c}"/>
+                    <apex:inputField styleclass="theFieldInput3" id="nop" value="{!candidate2.Number_of_Positions__c}"/>
+                    <apex:inputField styleclass="JobTitle" id="theFieldInput4" value="{!candidate2.Job_Title__c}"/>       
+                    <apex:inputField styleclass="SalaryOffered" id="theFieldInput5" value="{!candidate2.Salary_Offered__c}"/> 
+                    <apex:inputField styleclass="Active" id="theFieldInput6" value="{!candidate2.Active__c}"/>
+                    <apex:inputField styleclass="ExpiryDate" id="theFieldInput7" value="{!candidate2.Expiry_Date__c}"/>
+                    <apex:inputField styleclass="Total" id="theFieldInput8" value="{!candidate2.Total__c}"/>
+                    <apex:inputField styleclass="Description" id="theFieldInput9" value="{!candidate2.Description__c}"/>
+                      <apex:commandButton styleclass="button" value="save" action="{!Save}"/>                    
+                </apex:pageBlockSection>
+             </div>
+          
+            
+           
+            
+            
+            
+            
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>
